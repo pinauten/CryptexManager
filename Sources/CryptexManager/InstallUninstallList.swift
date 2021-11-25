@@ -66,9 +66,10 @@ class ListModule: iDeviceCommandLineModule {
             if image["DiskImageType"] as? String == "Cryptex",
                let id = image["CryptexName"] as? String,
                let version = image["CryptexVersion"] as? String,
-               let mntPath = image["MountPath"] as? String,
-               let dmgPath = image["BackingImage"] as? String {
+               let mntPath = image["MountPath"] as? String {
                 foundAtLeastOne = true
+                
+                let dmgPath = image["BackingImage"] as? String ?? "<unknown>"
                 
                 print("\(id):")
                 print("\tVersion: \(version)")

@@ -68,7 +68,7 @@ internal func handleIDeviceErrors(_ cb: () throws -> Void) -> Never {
         print("Failed to get cryptex nonce - Is this a Security Research Device?")
         print("This error may also occur if your device is locked.")
     } catch iDeviceCommandLineModuleError.connectionFailed {
-        print("Couldn't connect to the iDevice - Make sure it is availbale!")
+        print("Couldn't connect to the iDevice - Make sure it is available!")
     } catch PropertyListServiceError.invalidArg {
         print("Oops, this doesn't seem to be a Security Research Device!")
     } catch let e {
