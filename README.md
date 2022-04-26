@@ -3,7 +3,7 @@ CryptexManager is an open-source replacement for cryptexctl.
 It supports creating, signing, installing, uninstalling and listing cryptexes.
 
 # Building
-First, make sure libimobiledevice is installed (`brew install libimobiledevice`). Afterwards, it should be sufficient to run `swift build -c release -Xlinker -L/usr/local/lib` (or `swift build -c release -Xlinker -L/opt/homebrew/lib` on arm64). The executable can then be found at `.build/release/CryptexManager`.
+First, make sure libimobiledevice is installed (`brew install libimobiledevice`). Afterwards, it should be sufficient to run `swift build -c release -Xlinker -L/usr/local/lib` (or `swift build -c release -Xlinker -L/opt/homebrew/lib -Xcc -I/opt/homebrew/include` on arm64). The executable can then be found at `.build/release/CryptexManager`.
 
 # Using
 For now, just run CryptexManager without arguments to see the usage.
